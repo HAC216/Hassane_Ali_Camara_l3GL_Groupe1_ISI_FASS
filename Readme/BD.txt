@@ -1,0 +1,18 @@
+# Créer la base de données
+CREATE DATABASE Gestion_User;
+
+CREATE TABLE user (
+  id INT(4) NOT NULL ,
+  email VARCHAR(50) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  passwordHashed VARCHAR(100) NOT NULL,
+  PRIMARY KEY (email) 
+);
+
+CREATE TABLE role (
+  id INT(4) NOT NULL AUTO_INCREMENT,
+  nom VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+#C'ette basse va nous permettre de crer grace au code un user avec directement l'id du role ici l'utilisateur aura le role "user" par defaut le role Admin est gerer manuelment (veuiller lire #README.txt)
